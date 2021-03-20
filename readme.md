@@ -12,7 +12,7 @@ combine with ranking approach [2] and the architecture of Naive Similarity Discr
 
 # Experiments
 
-We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term $C$ are made with a range of $C\in \{2^{-20},2^{-19},...,2^{20}\}$.
+We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term C are made with a range of <img src="https://bit.ly/391W10b" align="center" border="0" alt="C\in \{2^{-20},2^{-19},...,2^{20}\}" width="203" height="21" />.
 
 Experimental results show the effectiveness of this simple model, which may have some value to investigate.
 
