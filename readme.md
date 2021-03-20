@@ -16,6 +16,8 @@ We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}
 
 Experimental results show the effectiveness of this simple model, which may have some value to investigate.
 
+![](resources/comparison.png)
+
 # References
 
 [1] Huang G B, Zhou H, Ding X, et al. Extreme learning machine for regression and multiclass classification[J]. IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), 2011, 42(2): 513-529.
