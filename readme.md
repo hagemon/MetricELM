@@ -6,13 +6,13 @@ Implementation of classical extreme learning machine (ELM) [1] for metric learni
 
 We utilized classical ELM optimization
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=%5Carg%5Cmin_%7B%5Cbeta%7D%7C%7C%5Cbeta%7C%7C%5E2%2BC%7C%7CH%5Cbeta-T%7C%7C%5E2&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0" align="center" border="0" alt="\arg\min_{\beta}||\beta||^2+C||H\beta-T||^2" width="225" height="33" />
+![](resources/optimization.png) 
 
 combine with ranking approach [2] and the architecture of Naive Similarity Discriminator (NSD) [3]. Concretely, we build pairwise instances with hidden layer, and T is the similarity of corresponding pairs.
 
 # Experiments
 
-We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term C are made with a range of <img src="https://bit.ly/391W10b" align="center" border="0" alt="C\in \{2^{-20},2^{-19},...,2^{20}\}" width="203" height="21" />.
+We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term C are made with a range of ![](resources/c_range.png).
 
 Experimental results show the effectiveness of this simple model, which may have some value to investigate.
 
