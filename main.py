@@ -1,28 +1,24 @@
-from elm import ELM
+from elm import MetricELM
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelBinarizer
 
+
+# Dataset
 iris = datasets.load_iris()
 x_data, y_data = iris['data'], iris['target']
 x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, random_state=11)
 
-hit = 0
-total = 0
-max_acc = 0
-for i in range(100):
-    if (i+1) % 10 == 0:
-        print(i)
-    elm = ELM(hidden_num=10)
-    elm.fit(x_train, LabelBinarizer().fit_transform(y_train))
-    pred = elm.predict(x_test)
-    res = pred == y_test
-    acc = np.mean(res)
-    if acc > max_acc:
-        max_acc = acc
-    hit += np.sum(res)
-    total += len(y_test)
 
-print(hit/total)
-print(max_acc)
+max_recall = np.zeros([4])
+max_c = None
+for x in [x for x in range(-20, 20)]:
+    elm = MetricELM(hidden_num=10, c=2**x)
+    elm.fit(x_train, y_train)
+    recall = elm.validation(x_test, y_test)
+    print("c=", x, "R@{1,2,4,8}:", np.around(recall, decimals=3))
+    if recall[0] > max_recall[0]:
+        max_recall = recall
+        max_c = x
+print('best:')
+print("c=", max_c, "R@{1,2,4,8}:", np.around(max_recall, decimals=3))
