@@ -12,11 +12,15 @@ combine with ranking approach [2] and the architecture of Naive Similarity Discr
 
 # Experiments
 
-We deployed Metric ELM on Iris dataset and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term C are made with a range of ![](resources/c_range.png).
+We deployed Metric ELM on Iris/Digits dataset from sklearn, and evaluated it with Recall@{1, 2, 4, 8}. Trails on regularization term C are made with a range of ![](resources/c_range.png).
 
 Experimental results show the effectiveness of this simple model, which may have some value to investigate.
 
-![](resources/comparison.png)
+### Validation on Iris
+![](resources/iris.png)
+
+### Validation on Digits
+![](resources/digits.png)
 
 # References
 
